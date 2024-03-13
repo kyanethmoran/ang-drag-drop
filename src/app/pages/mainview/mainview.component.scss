@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.has-background-dark {
+  background-color: #1d1d1d8e;
+}
+
+.app-name {
+  font-size: 28px;
+  font-family: "Lata", sans-serif;
+  font-weight: bold;
+}
+
+.has-gradient-text {
+  background: -webkit-linear-gradient(#ffffff, #7a7a7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
