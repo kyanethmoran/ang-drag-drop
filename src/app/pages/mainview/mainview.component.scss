@@ -90,10 +90,17 @@
 
   margin-bottom: 15px;
 
+  cursor: pointer;
+
   border-bottom: solid 1px #ddd;
   border-radius: 4px;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.05),
     0 8px 10px 1px rgba(0, 0, 0, 0.05), 0 3px 14px 2px rgba(0, 0, 0, 0.05);
+}
+
+//if i want to make the scrollbar invisible use this
+::-webkit-scrollbar {
+  display: none;
 }
 
 //if i want to make the scroll bar visible use this
@@ -118,8 +125,3 @@
 // ::-webkit-scrollbar-thumb:hover {
 //   background: #b9b8b8;
 // }
-
-//if i want to make the scrollbar invisible use this
-::-webkit-scrollbar {
-  display: none;
-}
