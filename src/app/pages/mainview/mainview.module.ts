@@ -5,8 +5,10 @@ import { MainviewComponent } from '../mainview/mainview.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
 @NgModule({
   declarations: [MainviewComponent],
-  imports: [CommonModule, MatToolbarModule],
+  imports: [CommonModule, MatToolbarModule, DragDropModule],
 })
 export class MainviewModule {}
