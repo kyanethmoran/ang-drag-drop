@@ -19,3 +19,107 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.board {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  min-width: 0;
+  min-height: 0;
+
+  .board-bar {
+    background: rgba($color: gray, $alpha: 0.5);
+    padding: 8px;
+
+    .board-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+.board-wrapper {
+  display: flex;
+  flex-grow: 1;
+  overflow-x: auto;
+
+  .board-columns {
+    display: flex;
+    flex-grow: 1;
+
+    .board-column {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-basis: 0; //forces the columns to all be the same size, regardlss of content
+
+      min-width: 200px;
+      margin: 50px;
+      padding: 25px;
+
+      border-radius: 10px;
+
+      background: rgba(white, 0.5);
+
+      &:not(:first-child) {
+        //if it's not the first column set the margin-left to 0
+        margin-left: 0px;
+      }
+
+      .column-title {
+        font-size: 20px;
+        font-weight: 800;
+        font-family: "Lato", "sans-serif";
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.tasks-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.task {
+  display: flex;
+  padding: 15px 12px;
+  background: white;
+
+  margin-bottom: 15px;
+
+  border-bottom: solid 1px #ddd;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.05),
+    0 8px 10px 1px rgba(0, 0, 0, 0.05), 0 3px 14px 2px rgba(0, 0, 0, 0.05);
+}
+
+//if i want to make the scroll bar visible use this
+// /* width */
+// ::-webkit-scrollbar {
+//   width: 7px;
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 5px grey;
+//   border-radius: 3px;
+// }
+
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: rgb(107, 107, 107);
+//   border-radius: 3px;
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #b9b8b8;
+// }
+
+//if i want to make the scrollbar invisible use this
+::-webkit-scrollbar {
+  display: none;
+}
