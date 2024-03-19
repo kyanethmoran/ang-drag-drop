@@ -8,7 +8,7 @@ $family-sans-serif: "Nunito", sans-serif;
 /* GLOBAL STYLES */
 html,
 body {
-  height: 100%;
+  height: 98%; //having his at 100% causes an unwanted scroll on main view
 }
 
 html {
@@ -19,6 +19,6 @@ html {
 }
 
 //if i want to make the scrollbar invisible use this
-// ::-webkit-scrollbar {
-//   display: none;
-// }
+::-webkit-scrollbar {
+  display: none;
+}
