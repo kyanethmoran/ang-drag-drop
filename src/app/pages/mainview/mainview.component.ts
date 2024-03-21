@@ -4,6 +4,8 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+import { Column } from 'src/app/models/column.model';
+import { Board } from 'src/app/models/board.model';
 
 @Component({
   selector: 'app-mainview',
@@ -13,11 +15,22 @@ import {
 export class MainviewComponent implements OnInit {
   constructor() {}
 
+  board: Board = new Board('Test Board', [
+    new Column('Ideas', [
+      'some random idea',
+      'This is another random idea',
+      'build an awesome application',
+    ]),
+    new Column('Research', [
+      'Lorem ipsum',
+      'foo',
+      'This was in the research column',
+    ]),
+    new Column('Todo', ['Get to work', 'Pick up groceries', 'Go home']),
+    new Column('Done', ['Get up', 'Brush teeth', 'Take a shower']),
+  ]);
+
   ngOnInit() {}
-
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
-
-  done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
