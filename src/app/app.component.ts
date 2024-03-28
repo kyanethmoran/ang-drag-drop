@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ang-drag-drop';
 
-  sidenavOpen = false;
+  sidenavOpen = true;
+
+  addBoard() {
+    console.log(' open dialog to Add board');
+  }
+
+  helpinfo() {
+    console.log(' open dialog to help info');
+  }
 }
