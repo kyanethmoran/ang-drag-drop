@@ -14,27 +14,42 @@
   -webkit-text-fill-color: transparent;
 }
 
+.sidenav-routes {
+  h2 {
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .routes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    height: 58vh;
+    overflow-y: auto;
+
+    button {
+      width: 90%;
+    }
+  }
+}
+
 .sidenav-actions {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: space-around;
   align-items: center;
   padding: 10px;
-}
+  height: 15%;
 
-.add-board-btn {
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.root {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  button {
+    width: 90%;
+  }
 }
 
 //CHANGE THE MAT SIDENAV DEFUALT STYLINGS
@@ -43,6 +58,7 @@
   height: 89vh;
   background-color: rgba(0, 0, 0, 0);
 }
+
 .mat-drawer {
   padding: 20px;
   background-color: rgba(236, 234, 234, 0.418);

@@ -12,21 +12,36 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <mat-drawer-container class="example-container">
-    <mat-drawer #drawer class="example-sidenav" mode="side">
+  <mat-drawer-container>
+    <mat-drawer #drawer mode="push" opened="true">
       <div class="sidenav-routes">
-        <p>Auto-resizing sidenav</p>
+        <h2 class="sidenav-header">Select a Board</h2>
         <!-- ADD IN THE NAME OF THE BOARDS -->
+        <div class="routes">
+          <!-- routes for the indivial boards to be displayed in mainview -->
+
+          <!-- for testing -->
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+        </div>
       </div>
 
       <div class="sidenav-actions">
         <!-- OPTION TO CREATE NEW BOARD -->
-        <button mat-raised-button class="add-board-btn">
+        <button mat-raised-button class="add-board-btn" (click)="addBoard()">
           <mat-icon>add</mat-icon>Add Board
+        </button>
+        <button mat-raised-button class="help-btn" (click)="helpinfo()">
+          <mat-icon>info</mat-icon>How to use Kanban
         </button>
       </div>
     </mat-drawer>
 
-    <router-outlet></router-outlet>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
   </mat-drawer-container>
 </div>
