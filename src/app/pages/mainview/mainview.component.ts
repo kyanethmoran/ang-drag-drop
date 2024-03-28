@@ -28,6 +28,8 @@ export class MainviewComponent implements OnInit {
     ]),
     new Column('Todo', ['Get to work', 'Pick up groceries', 'Go home']),
     new Column('Done', ['Get up', 'Brush teeth', 'Take a shower']),
+    new Column('Review', ['Get up', 'Brush teeth', 'Take a shower']),
+    new Column('test', ['Get up', 'Brush teeth', 'Take a shower']),
   ]);
 
   ngOnInit() {}
