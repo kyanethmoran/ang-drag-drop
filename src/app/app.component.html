@@ -1,1 +1,32 @@
-<router-outlet></router-outlet>
+<div>
+  <mat-toolbar class="has-background-dark">
+    <mat-toolbar-row>
+      <button
+        mat-icon-button
+        (click)="drawer.toggle(); sidenavOpen = !sidenavOpen"
+      >
+        <mat-icon *ngIf="!sidenavOpen">menu</mat-icon>
+        <mat-icon *ngIf="sidenavOpen">close</mat-icon>
+      </button>
+      <h1 class="app-name has-gradient-text">Kanban</h1>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-drawer-container class="example-container">
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <div class="sidenav-routes">
+        <p>Auto-resizing sidenav</p>
+        <!-- ADD IN THE NAME OF THE BOARDS -->
+      </div>
+
+      <div class="sidenav-actions">
+        <!-- OPTION TO CREATE NEW BOARD -->
+        <button mat-raised-button class="add-board-btn">
+          <mat-icon>add</mat-icon>Add Board
+        </button>
+      </div>
+    </mat-drawer>
+
+    <router-outlet></router-outlet>
+  </mat-drawer-container>
+</div>
